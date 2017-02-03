@@ -1,0 +1,220 @@
+$text-color: #282828 //darkblack
+$heading: #34314c
+
+@mixin bg_img($url, $size, $position, $repeat)
+  background-image: url($url)
+  background-size: $size
+  background-position: $position
+  background-repeat: $repeat
+
+
+body
+  font-family: "Open Sans", Helvetica, sans-serif
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: "Bodoni MT", Helvetica, sans-serif;
+  font-weight: 700
+
+
+.clearfix::before,
+.clearfix::after
+  content: " "
+  display: table
+
+.clearfix::after
+  clear: both
+
+
+.wrapper
+  width: 1280px
+  margin: 0 auto
+  max-width: 100%
+
+#header_banner
+  background: #f1f1f1
+  padding: 2em 4em
+  overflow-y: hidden
+  height: 600px
+
+.logo
+  img
+    width: 64px
+    height: 64px
+
+.navbar
+  float: right
+  li
+    float: left
+    list-style: none
+    margin-left: 7em
+    a
+      text-decoration: none
+      font-size: 1.5em
+      font-family: "Bodoni MT", Helvetica, sans-serif
+      font-weight: 700
+
+
+.content
+  float: left
+  margin: .8em auto
+  h1
+    float: right
+    font-size: 6em
+    color: $heading
+    margin-left: 1.5em
+    &::before
+      content: " "
+      height: 50%
+      width: 5px
+      position: absolute
+      top: 1.85em
+      right: 7em
+      background: $heading
+
+#coding
+  background-image: linear-gradient(rgba(52, 49, 76, 0.8), rgba(52, 49, 76, 0.8)), url("../img/code-bg.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 640px
+
+#phrase
+  background: #fff
+  width: 50%
+  margin: 0
+  height: 100%
+  .content_wrapper
+    width: 80%
+    padding: 6em 0
+    margin: auto
+    h3
+      font-size: 2.45em
+      margin: 1.8em 0 1em 0
+      color: $heading
+    p
+      font-size: 1em
+      font-weight: 200
+      line-height: 2.75em
+      text-align: justify
+
+.row
+  width: 100%
+  margin: 2em 0
+  &::before,
+  &::after
+    content: " "
+    display: table
+  &::after
+    clear: both
+
+
+
+
+#work
+  background: $heading
+  padding: 5em 0
+  header
+    margin-bottom: 4em
+  h3
+    color: #fff
+    text-align: center
+    font-size: 2.75em
+    margin-bottom: .5em
+  .text
+    font-size: 1.5em
+    color: #fff
+    text-align: center
+    font-weight: 200
+  .card
+    background: #fff
+    border-radius: .35em
+    height: 450px
+    display: table
+  .card_full
+    width: 100%
+  .card_1
+    @include bg_img('../img/closetsale.jpg',100%, top left, no-repeat)
+  .card_2
+      @include bg_img('../img/Creative-Agency.jpg',100%, top left, no-repeat)
+  .card_3
+      @include bg_img('../img/shoes.jpg',100%, top left, no-repeat)
+      background-size: cover
+  .card_4
+      @include bg_img('../img/genesis-cinemas.jpg',100%, top left, no-repeat)
+  .card_half
+    width: 49%
+    float: left
+    height: 640px
+  .view_more
+    width: 23%
+    float: right
+    vertical-align: middle
+    a
+      float: left
+      display: inline-block
+      text-decoration: none
+      transition: all .3s ease-in-out
+      &:hover h2
+        color: #fff
+      h2
+        font-size: 4.2em
+        margin: 0 auto
+        color: #c1c1c1
+        padding: 2em 0
+
+  .card_third
+    width: 75%
+    margin-right: 1%
+    float: left
+  .right
+    margin-left: 1%
+  .left
+    margin-right: 1%
+
+  .card_inner
+    display: table-cell
+    vertical-align: middle
+    height: 100%
+    padding: 1.5em 12%
+    p
+      font-size: 2.4em
+      font-weight: 200
+      color: #fff
+      margin-bottom: .2em
+    h2
+      font-size: 4.2em
+      margin: 0 auto
+      color: #fff
+
+  .pink,
+  .red,
+  .green,
+  .blue
+    border-radius: .35em
+  .pink
+    background-color: rgba(198, 0 , 255, 0.7)
+  .green
+    background-color: rgba(51,187, 74, 0.7)
+  .red
+    background-color: rgba(237, 20 ,91, 0.7)
+  .blue
+    background-color: rgba(68, 62 ,202, 0.7)
+
+
+#footer
+  background: #fff
+.social_icons
+  float: right
+  li
+    float: left
+    list-style: none
+    margin-left: 2em
+.follow
+  font-family: "Bodoni MT", Helvetica, sans-serif
+  font-size: 2em
+  font-weight: 400
